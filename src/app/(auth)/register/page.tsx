@@ -82,7 +82,7 @@ export default function RegisterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#4C1D95] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
@@ -98,7 +98,7 @@ export default function RegisterPage() {
             <h2 className="text-3xl font-bold text-gray-900">Daftar Akun Baru</h2>
             <p className="mt-2 text-sm text-gray-600">
               Atau{' '}
-              <Link href="/login" className="font-medium text-[#4C1D95] hover:text-[#3b1672]">
+              <Link href="/login" className="font-medium text-[#3f51b5] hover:text-[#3b1672]">
                 masuk ke akun yang sudah ada
               </Link>
             </p>
@@ -125,7 +125,7 @@ export default function RegisterPage() {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4C1D95] focus:border-[#4C1D95]"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#3f51b5] focus:border-[#3f51b5]"
                   />
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function RegisterPage() {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4C1D95] focus:border-[#4C1D95]"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#3f51b5] focus:border-[#3f51b5]"
                   />
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function RegisterPage() {
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4C1D95] focus:border-[#4C1D95]"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#3f51b5] focus:border-[#3f51b5]"
                   />
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function RegisterPage() {
                     required
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#4C1D95] focus:border-[#4C1D95]"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#3f51b5] focus:border-[#3f51b5]"
                   />
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function RegisterPage() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#4C1D95] hover:bg-[#3b1672] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4C1D95] disabled:opacity-50"
+                  className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3f51b5] disabled:opacity-50"
                 >
                   {isLoading ? 'Memproses...' : 'Daftar'}
                 </button>

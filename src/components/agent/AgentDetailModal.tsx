@@ -206,7 +206,7 @@ export function AgentDetailModal({ agent, onClose, onStartChat }: AgentDetailMod
               router.push(`/chat?agent=${agent.id}`);
             }}
             disabled={isProcessing}
-            className={`w-full mt-8 py-3 px-4 bg-[#4C1D95] text-white rounded-xl font-medium hover:bg-[#3b1672] transition-colors flex items-center justify-center gap-2 ${
+            className={`w-full mt-8 py-3 px-4 bg-[#3f51b5] text-white rounded-xl font-medium hover:bg-[#3b1672] transition-colors flex items-center justify-center gap-2 ${
               isProcessing ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
@@ -218,7 +218,7 @@ export function AgentDetailModal({ agent, onClose, onStartChat }: AgentDetailMod
           {isProcessing && (
             <div className="absolute inset-0 bg-white/50 dark:bg-gray-900/50 flex items-center justify-center rounded-2xl">
               <div className="flex flex-col items-center gap-2">
-                <div className="animate-spin rounded-full h-8 w-8 border-2 border-[#4C1D95] border-t-transparent"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-2 border-[#3f51b5] border-t-transparent"></div>
                 <p className="text-sm text-gray-600">Memulai percakapan...</p>
               </div>
             </div>

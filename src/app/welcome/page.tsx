@@ -208,7 +208,7 @@ export default function Home() {
             {/* Header */}
             <header className="flex justify-between items-center p-4 border-b border-gray-200">
               <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-[#4C1D95] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
                 <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
@@ -222,7 +222,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/register"
-                  className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-[#4C1D95] hover:bg-[#3b1672] rounded-lg"
+                  className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] rounded-lg"
                 >
                   Daftar
                 </Link>
@@ -235,7 +235,7 @@ export default function Home() {
                 <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Apa yang bisa saya bantu?</h1>
                 <p className="text-[14px] text-gray-600 max-w-2xl mx-auto leading-relaxed">
                   💡 Enterprise AI adalah teman bertanya tentang perusahaan kamu.<br />
-                  👉 Ketik pesan di chat untuk tanya fiture atau <Link href="/login" className="text-[#4C1D95] font-medium hover:underline">Login/Daftar untuk mulai mencoba.</Link>
+                  👉 Ketik pesan di chat untuk tanya fiture atau <Link href="/login" className="text-[#3f51b5] font-medium hover:underline">Login/Daftar untuk mulai mencoba.</Link>
                 </p>
               </div>
 
@@ -245,7 +245,7 @@ export default function Home() {
                   <div
                     key={category.category_id}
                     onClick={() => handleCategoryClick(category)}
-                    className="p-6 rounded-lg border border-gray-200 hover:border-[#4C1D95] transition-colors duration-200 cursor-pointer bg-white"
+                    className="p-6 rounded-lg border border-gray-200 hover:border-[#3f51b5] transition-colors duration-200 cursor-pointer bg-white"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-lg overflow-hidden">
@@ -344,11 +344,11 @@ export default function Home() {
                     {showInitialDisclaimer ? (
                       <span>
                         Dengan mengirim pesan ke Enterprise AI, Anda menyetujui{' '}
-                        <Link href="/terms" className="text-[#4C1D95] hover:underline font-bold">
+                        <Link href="/terms" className="text-[#3f51b5] hover:underline font-bold">
                           Ketentuan Layanan
                         </Link>{' '}
                         kami dan telah membaca{' '}
-                        <Link href="/privacy" className="text-[#4C1D95] hover:underline font-bold">
+                        <Link href="/privacy" className="text-[#3f51b5] hover:underline font-bold">
                           Kebijakan Privasi
                         </Link>{' '}
                         kami.

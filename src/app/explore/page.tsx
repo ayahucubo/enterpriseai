@@ -46,7 +46,7 @@ function ExploreContent() {
               <Menu size={20} className="text-gray-500" />
             </button>
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#4C1D95] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" />
               </div>
               <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Enterprise AI</h1>

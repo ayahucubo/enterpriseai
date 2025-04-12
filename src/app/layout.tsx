@@ -38,7 +38,7 @@ export default function RootLayout({
         <meta name="description" content="AI Assistant untuk membantu produktivitas Anda" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#4C1D95" />
+        <meta name="theme-color" content="#3f51b5" />
         
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <link rel="shortcut icon" href="/favicon.ico" />

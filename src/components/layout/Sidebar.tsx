@@ -453,7 +453,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
               onClick={() => setShowProfileMenu(!showProfileMenu)}
               className="w-full flex items-center gap-3 px-4 py-2 hover:bg-[hsl(262,80%,95%)] dark:hover:bg-[hsl(262,80%,15%)] rounded-lg"
             >
-              <div className="w-8 h-8 rounded-full bg-[#4c1d95] flex items-center justify-center text-white">
+              <div className="w-8 h-8 rounded-full bg-[#3f51b5] flex items-center justify-center text-white">
                 {username ? username[0].toUpperCase() : 'U'}
               </div>
               <div className="flex-1 text-left">

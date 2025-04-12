@@ -9,7 +9,7 @@ interface AgentCardProps {
 export function AgentCard({ agent, onClick }: AgentCardProps) {
   return (
     <div
-      className="p-6 rounded-lg border border-gray-200 hover:border-[#4C1D95] transition-colors duration-200 cursor-pointer bg-white"
+      className="p-6 rounded-lg border border-gray-200 hover:border-[#3f51b5] transition-colors duration-200 cursor-pointer bg-white"
       onClick={onClick}
     >
       <div className="flex items-start gap-4">
