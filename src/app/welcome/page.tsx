@@ -209,7 +209,7 @@ export default function Home() {
             <header className="flex justify-between items-center p-4 border-b border-gray-200">
               <Link href="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
+                  <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
                 </div>
                 <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
               </Link>
@@ -278,7 +278,7 @@ export default function Home() {
 
               {/* Chat Input */}
               <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900">
-                <div className="max-w-3xl mx-auto px-4">
+                <div className="max-w-5xl mx-auto px-4">
                   <form
                     onSubmit={handleSubmit}
                     className="flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden mb-1 mt-4"

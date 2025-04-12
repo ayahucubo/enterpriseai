@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, Menu, Heart } from 'lucide-react';
+import { Search, Menu } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { AgentDetailModal } from '@/components/agent/AgentDetailModal';
 import { AgentCard } from '@/components/agent/AgentCard';
@@ -45,12 +47,12 @@ function ExploreContent() {
             >
               <Menu size={20} className="text-gray-500" />
             </button>
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" />
+                <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
               </div>
               <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Enterprise AI</h1>
-            </div>
+            </Link>
           </div>
         </div>
 

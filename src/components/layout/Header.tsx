@@ -1,16 +1,22 @@
 'use client';
 
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { UserCircleIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Heart } from 'lucide-react';
 
 export default function Header() {
   return (
     <header className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div className="flex items-center gap-2">
-        <Heart className="w-6 h-6 text-[hsl(262,80%,45%)]" />
-        <h1 className="text-xl font-semibold">Enterprise AI</h1>
+        <Link href="/" className="flex items-center gap-2">
+          <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
+            <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
+          </div>
+          <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Enterprise AI</h1>
+        </Link>
       </div>
 
       <Menu as="div" className="relative">
