@@ -1,19 +1,17 @@
-# fly.toml app configuration file generated for kamunakuai on 2025-04-01T10:40:45+07:00
+# fly.toml app configuration file generated for enterpriseai on 2025-04-12T08:55:41+07:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'kamunakuai'
+app = 'enterpriseai'
 primary_region = 'sin'
 
 [build]
-  [build.args]
-    NEXT_PUBLIC_GOOGLE_CLIENT_ID = "${NEXT_PUBLIC_GOOGLE_CLIENT_ID}"
 
 [env]
+  NEXT_PUBLIC_API_URL = 'https://enterpriseai.fly.dev/api'
+  NEXT_PUBLIC_GOOGLE_CLIENT_ID = '${NEXT_PUBLIC_GOOGLE_CLIENT_ID}'
   PORT = '8090'
-  NEXT_PUBLIC_GOOGLE_CLIENT_ID = "${NEXT_PUBLIC_GOOGLE_CLIENT_ID}"
-  NEXT_PUBLIC_API_URL = "https://kamunakuai.fly.dev/api"
 
 [http_service]
   internal_port = 8090

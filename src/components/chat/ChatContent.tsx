@@ -10,6 +10,7 @@ import { Menu, Plus, Globe, Lightbulb, MoreHorizontal, ArrowUp, User, Mic } from
 import clsx from 'clsx';
 import { v4 as uuidv4 } from 'uuid';
 import Image from 'next/image';
+import { API_BASE_URL } from '@/config/api';
 
 interface ChatContentProps {
   isSidebarOpen: boolean;
@@ -109,7 +110,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
 
         setIsLoading(true);
 
-        const response = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/agents/detail`, {
+        const response = await fetch(`${API_BASE_URL}/agents/detail`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -256,7 +257,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
       if (!authData) return;
 
       // 1. Buat chat baru
-      const newChatResponse = await fetch('https://coachbot-n8n-01.fly.dev/webhook/chat/newid', {
+      const newChatResponse = await fetch(`${API_BASE_URL}/chat/newid`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -314,7 +315,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
       setLocalMessages(prev => [...prev, assistantMessage]);
 
       // 3. Refresh history sidebar hanya saat membuat chat baru
-      const historyResponse = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/chat/history-sidebar`, {
+      const historyResponse = await fetch(`${API_BASE_URL}/chat/history-sidebar`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -533,7 +534,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
           </form>
 
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center pb-4 md:pb-4 pb-[calc(1rem+env(safe-area-inset-bottom,16px))]">
-            Kamunaku AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
+            Enterprise AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
           </p>
         </div>
       </div>

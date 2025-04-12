@@ -13,7 +13,7 @@ export default function Privacy() {
       <header className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link href="/" className="text-xl font-semibold">
-            Kamunaku AI
+            Enterprise AI
           </Link>
         </div>
       </header>
@@ -29,7 +29,7 @@ export default function Privacy() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">1. Informasi yang Kami Kumpulkan</h2>
             <p>
-              Kami mengumpulkan informasi yang Anda berikan secara langsung kepada kami saat menggunakan layanan Kamunaku AI.
+              Kami mengumpulkan informasi yang Anda berikan secara langsung kepada kami saat menggunakan layanan Enterprise AI.
               Informasi ini dapat mencakup:
             </p>
             <ul className="list-disc pl-6 mt-4">

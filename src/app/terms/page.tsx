@@ -13,7 +13,7 @@ export default function Terms() {
       <header className="border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <Link href="/" className="text-xl font-semibold">
-            Kamunaku AI
+            Enterprise AI
           </Link>
         </div>
       </header>
@@ -29,7 +29,7 @@ export default function Terms() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">1. Penerimaan Ketentuan</h2>
             <p>
-              Dengan mengakses dan menggunakan layanan Kamunaku AI, Anda menyetujui untuk terikat oleh ketentuan layanan ini. 
+              Dengan mengakses dan menggunakan layanan Enterprise AI, Anda menyetujui untuk terikat oleh ketentuan layanan ini. 
               Jika Anda tidak setuju dengan bagian apapun dari ketentuan ini, Anda tidak diperkenankan menggunakan layanan kami.
             </p>
           </section>
@@ -51,7 +51,7 @@ export default function Terms() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">3. Batasan Tanggung Jawab</h2>
             <p>
-              Kamunaku AI menyediakan layanan "sebagaimana adanya" tanpa jaminan apapun. 
+              Enterprise AI menyediakan layanan "sebagaimana adanya" tanpa jaminan apapun. 
               Kami tidak bertanggung jawab atas kerugian yang mungkin timbul dari penggunaan layanan kami.
             </p>
           </section>
@@ -67,7 +67,7 @@ export default function Terms() {
           <section className="mb-8">
             <h2 className="text-xl font-semibold mb-4">5. Hak Kekayaan Intelektual</h2>
             <p>
-              Semua konten yang dihasilkan oleh Kamunaku AI tetap menjadi hak milik kami. 
+              Semua konten yang dihasilkan oleh Enterprise AI tetap menjadi hak milik kami. 
               Anda diberikan lisensi terbatas untuk menggunakan konten tersebut sesuai dengan ketentuan layanan ini.
             </p>
           </section>

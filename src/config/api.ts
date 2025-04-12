@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'https://coachbot-n8n-01.fly.dev/webhook'; 
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://coachbot-n8n-01.fly.dev/webhook/enterpriseai';

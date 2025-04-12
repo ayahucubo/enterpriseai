@@ -13,7 +13,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Kamunaku AI - Asisten AI Kamu & Aku',
+  title: 'Enterprise AI - Asisten AI Perusahaan Kamu',
   description: 'Asisten AI yang membantu Kamu dalam berbagai tugas sehari-hari',
 };
 
@@ -31,10 +31,10 @@ export default function RootLayout({
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="application-name" content="Kamunaku AI" />
+        <meta name="application-name" content="Enterprise AI" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Kamunaku" />
+        <meta name="apple-mobile-web-app-title" content="Enterprise AI" />
         <meta name="description" content="AI Assistant untuk membantu produktivitas Anda" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />

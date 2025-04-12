@@ -10,7 +10,7 @@ export default function Header() {
     <header className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div className="flex items-center gap-2">
         <Heart className="w-6 h-6 text-[hsl(262,80%,45%)]" />
-        <h1 className="text-xl font-semibold">Kamunaku AI</h1>
+        <h1 className="text-xl font-semibold">Enterprise AI</h1>
       </div>
 
       <Menu as="div" className="relative">

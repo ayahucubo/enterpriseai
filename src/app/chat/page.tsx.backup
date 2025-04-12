@@ -480,8 +480,8 @@ export default function ChatPage() {
   const handleShareChat = async (chatId: string) => {
     try {
       const shareData = {
-        title: 'Kamunaku AI Chat',
-        text: 'Lihat percakapan saya dengan Kamunaku AI',
+        title: 'Enterprise AI Chat',
+        text: 'Lihat percakapan saya dengan Enterprise AI',
         url: `${window.location.origin}/chat/${chatId}`,
       };
       await navigator.share(shareData);
@@ -658,7 +658,7 @@ export default function ChatPage() {
               </button>
             </form>
             <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-4">
-              Kamunaku AI bisa salah. Periksa info penting.
+              Enterprise AI bisa salah. Periksa info penting.
             </p>
           </div>
         </div>

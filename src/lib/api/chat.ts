@@ -130,7 +130,7 @@ export async function renameChat(chatId: string, newTitle: string): Promise<void
 
 export async function deleteChat(userId: string, chatId: string) {
   try {
-    const response = await fetch('https://coachbot-n8n-01.fly.dev/webhook/chat/delete', {
+    const response = await fetch(`${API_BASE_URL}/chat/delete`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

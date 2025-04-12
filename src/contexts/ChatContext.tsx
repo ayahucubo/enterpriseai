@@ -105,7 +105,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
         const authData = JSON.parse(auth);
         if (!authData?.user?.id) return;
         
-        const response = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/agents/detail`, {
+        const response = await fetch(`${API_BASE_URL}/agents/detail`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -155,7 +155,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       if (!authData?.token) return;
 
       // Pertama, ambil detail chat untuk mendapatkan webhook_url
-      const detailResponse = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/chat/detail`, {
+      const detailResponse = await fetch(`${API_BASE_URL}/chat/detail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -173,7 +173,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       }
 
       // Kemudian ambil riwayat chat
-      const chatResponse = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/chat`, {
+      const chatResponse = await fetch(`${API_BASE_URL}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -214,7 +214,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
       const authData = localStorage.getItem('auth') ? JSON.parse(localStorage.getItem('auth')!) : null;
       if (!authData) return;
 
-      const response = await fetch(`https://coachbot-n8n-01.fly.dev/webhook/chat/edit`, {
+      const response = await fetch(`${API_BASE_URL}/chat/edit`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { SearchParamsProvider } from '@/components/common/SearchParamsProvider';
+import { API_BASE_URL } from '@/config/api';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -22,7 +23,7 @@ export default function LoginPage() {
     setError('');
 
     try {
-      const response = await fetch('https://coachbot-n8n-01.fly.dev/webhook/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +76,7 @@ export default function LoginPage() {
             setIsLoading(true);
             setError('');
             
-            const result = await fetch('https://coachbot-n8n-01.fly.dev/webhook/google-auth', {
+            const result = await fetch(`${API_BASE_URL}/google-auth`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -145,7 +146,7 @@ export default function LoginPage() {
               <div className="w-10 h-10 rounded-full bg-[#4C1D95] flex items-center justify-center">
                 <Heart className="w-5 h-5 text-white" />
               </div>
-              <h1 className="text-xl font-semibold text-gray-900">Kamunaku AI</h1>
+              <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
             </Link>
           </div>
         </div>

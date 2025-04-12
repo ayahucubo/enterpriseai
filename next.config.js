@@ -35,7 +35,7 @@ const nextConfig = {
   experimental: {
     // Hanya aktifkan fitur yang benar-benar dibutuhkan
     serverActions: {
-      allowedOrigins: ['localhost:3000', 'kamunakuai.fly.dev'],
+      allowedOrigins: ['localhost:3000', 'enterprise.fly.dev'],
     },
   },
   // Disable FedCM to resolve Google Sign-In error

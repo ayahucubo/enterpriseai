@@ -1,6 +1,6 @@
 {
-  "name": "Kamunaku AI",
-  "short_name": "Kamunaku",
+  "name": "Enterprise AI",
+  "short_name": "enterpriseai",
   "description": "AI Assistant untuk membantu produktivitas Anda",
   "start_url": "/",
   "display": "standalone",

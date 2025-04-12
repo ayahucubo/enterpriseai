@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { API_BASE_URL } from '@/config/api';
 
 interface User {
   id: string;
@@ -22,9 +23,6 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// URL API n8n
-const N8N_API_URL = 'https://coachbot-n8n-01.fly.dev/webhook';
-
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [authData, setAuthData] = useState<AuthData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -43,7 +41,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
         const { token } = JSON.parse(authData);
         
-        const response = await fetch(`${N8N_API_URL}/auth/me`, {
+        const response = await fetch(`${API_BASE_URL}/auth/me`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

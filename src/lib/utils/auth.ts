@@ -1,13 +1,11 @@
 import { AuthData } from '@/contexts/AuthContext';
-
-// URL API n8n
-const N8N_API_URL = 'https://coachbot-n8n-01.fly.dev/webhook';
+import { API_BASE_URL } from '@/config/api';
 
 export async function getAuthData(): Promise<AuthData | null> {
   try {
-    console.log('Getting auth data from:', `${N8N_API_URL}/auth/me`);
+    console.log('Getting auth data from:', `${API_BASE_URL}/auth/me`);
     
-    const response = await fetch(`${N8N_API_URL}/auth/me`, {
+    const response = await fetch(`${API_BASE_URL}/auth/me`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -45,9 +43,9 @@ export async function setAuthData(data: AuthData): Promise<void> {
 
 export async function clearAuthData(): Promise<void> {
   // Logout dengan menghapus cookie
-  console.log('Logging out at:', `${N8N_API_URL}/auth/logout`);
+  console.log('Logging out at:', `${API_BASE_URL}/auth/logout`);
   
-  await fetch(`${N8N_API_URL}/auth/logout`, {
+  await fetch(`${API_BASE_URL}/auth/logout`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

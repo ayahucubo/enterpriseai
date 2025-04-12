@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '@/config/api';
+
 interface LoginCredentials {
   email: string;
   password: string;
@@ -32,8 +34,6 @@ interface GoogleUser {
   name: string;
   created_at: string;
 }
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 export async function login(credentials: LoginCredentials): Promise<AuthResponse> {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {

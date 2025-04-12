@@ -12,6 +12,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { SearchParamsProvider } from '@/components/common/SearchParamsProvider';
 import Image from 'next/image';
+import { API_BASE_URL } from '@/config/api';
 
 interface Message {
   id: string;
@@ -82,7 +83,7 @@ export default function Home() {
   useEffect(() => {
     const loadInitialData = async () => {
       try {
-        const response = await fetch('https://coachbot-n8n-01.fly.dev/webhook/welcome/tabs', {
+        const response = await fetch(`${API_BASE_URL}/welcome/tabs`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -128,7 +129,7 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://coachbot-n8n-01.fly.dev/webhook/chat/welcome', {
+      const response = await fetch(`${API_BASE_URL}/chat/welcome`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -210,7 +211,7 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-full bg-[#4C1D95] flex items-center justify-center">
                   <Heart className="w-5 h-5 text-white" />
                 </div>
-                <h1 className="text-xl font-semibold text-gray-900">Kamunaku AI</h1>
+                <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
               </Link>
               <div className="flex items-center gap-4">
                 <Link
@@ -233,7 +234,7 @@ export default function Home() {
               <div className="text-center mb-8">
                 <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Apa yang bisa saya bantu?</h1>
                 <p className="text-[14px] text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  💡 Kamunaku AI adalah teman ngobrol kamu & aku.<br />
+                  💡 Enterprise AI adalah teman bertanya tentang perusahaan kamu.<br />
                   👉 Ketik pesan di chat untuk tanya fiture atau <Link href="/login" className="text-[#4C1D95] font-medium hover:underline">Login/Daftar untuk mulai mencoba.</Link>
                 </p>
               </div>
@@ -342,7 +343,7 @@ export default function Home() {
                   <p className="text-xs text-gray-500 text-center mt-2 pb-4 md:pb-4 pb-[calc(1rem+env(safe-area-inset-bottom,16px))]">
                     {showInitialDisclaimer ? (
                       <span>
-                        Dengan mengirim pesan ke Kamunaku AI, Anda menyetujui{' '}
+                        Dengan mengirim pesan ke Enterprise AI, Anda menyetujui{' '}
                         <Link href="/terms" className="text-[#4C1D95] hover:underline font-bold">
                           Ketentuan Layanan
                         </Link>{' '}
@@ -354,7 +355,7 @@ export default function Home() {
                       </span>
                     ) : (
                       <>
-                        Kamunaku AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
+                        Enterprise AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
                       </>
                     )}
                   </p>
