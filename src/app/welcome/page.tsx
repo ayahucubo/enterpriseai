@@ -30,8 +30,8 @@ interface Category {
 }
 
 const markdownComponents = {
-  p: ({ children }: { children: React.ReactNode }) => <p className="mb-2 last:mb-0">{children}</p>,
-  strong: ({ children }: { children: React.ReactNode }) => <strong className="font-bold">{children}</strong>,
+  p: ({ children }: { children: React.ReactNode }) => <p className="mb-2 last:mb-0 text-sm">{children}</p>,
+  strong: ({ children }: { children: React.ReactNode }) => <strong className="font-bold text-sm">{children}</strong>,
   em: ({ children }: { children: React.ReactNode }) => <em className="italic">{children}</em>,
   ul: ({ children }: { children: React.ReactNode }) => (
     <ul className="list-disc pl-6 space-y-2 my-4">
@@ -234,7 +234,7 @@ export default function Home() {
               <div className="text-center mb-8">
                 <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Apa yang bisa saya bantu?</h1>
                 <p className="text-[14px] text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  💡 Enterprise AI adalah teman bertanya tentang perusahaan kamu.<br />
+                  💡 Aku Asisten AI perusahaan kamu.<br />
                   👉 Ketik pesan di chat untuk tanya fiture atau <Link href="/login" className="text-[#3f51b5] font-medium hover:underline">Login/Daftar untuk mulai mencoba.</Link>
                 </p>
               </div>
@@ -347,7 +347,7 @@ export default function Home() {
                         <Link href="/terms" className="text-[#3f51b5] hover:underline font-bold">
                           Ketentuan Layanan
                         </Link>{' '}
-                        kami dan telah membaca{' '}
+                        & telah membaca{' '}
                         <Link href="/privacy" className="text-[#3f51b5] hover:underline font-bold">
                           Kebijakan Privasi
                         </Link>{' '}
@@ -355,7 +355,7 @@ export default function Home() {
                       </span>
                     ) : (
                       <>
-                        Enterprise AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
+                        Enterprise AI bisa salah. Periksa info penting. <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Dukung kami</a>.
                       </>
                     )}
                   </p>

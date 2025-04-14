@@ -474,8 +474,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
                 handleSendMessage();
               }
             }}
-            className="flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden mb-1 mt-4"
-          >
+            className="flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden mb-1 mt-1">
             <div className="flex items-center gap-2 p-2">
               <button
                 type="button"
@@ -534,7 +533,7 @@ export function ChatContent({ isSidebarOpen, onToggleSidebar }: ChatContentProps
           </form>
 
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center pb-4 md:pb-4 pb-[calc(1rem+env(safe-area-inset-bottom,16px))]">
-            Enterprise AI bisa salah. Periksa info penting. Support kami <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">di sini</a>.
+            Enterprise AI bisa salah. Periksa info penting. <a href="https://trakteer.id/kamunaku" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Dukung kami</a>.
           </p>
         </div>
       </div>
