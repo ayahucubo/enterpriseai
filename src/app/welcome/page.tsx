@@ -204,11 +204,11 @@ export default function Home() {
         {(searchParams) => (
           <div className="flex flex-col min-h-screen bg-white">
             <header className="border-b border-gray-200">
-              <div className="grid grid-cols-3 items-center h-16 px-4">
+              <div className="flex items-center justify-between h-16 px-4">
 
                 {/* KIRI */}
                 <Link href="/" className="flex items-center gap-2">
-                  <div className="relative w-20 h-10">
+                  <div className="relative w-16 h-8 sm:w-20 sm:h-10">
                     <Image
                       src="/icons/logo-sdx.jpeg"
                       alt="SDX Logo"
@@ -216,14 +216,16 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <h1 className="text-xl font-semibold text-gray-900">
+
+                  {/* Title hanya desktop */}
+                  <h1 className="hidden sm:block text-xl font-semibold text-gray-900">
                     Enterprise AI
                   </h1>
                 </Link>
 
-                {/* TENGAH */}
+                {/* TENGAH – hanya desktop */}
                 <div className="flex justify-center">
-                  <div className="relative w-40 h-10">
+                  <div className="relative w-20 h-10 md:w-40 md:h-10">
                     <Image
                       src="/icons/logo-pelni.jpeg"
                       alt="PELNI Logo"
@@ -234,16 +236,18 @@ export default function Home() {
                 </div>
 
                 {/* KANAN */}
-                <div className="flex justify-end items-center gap-4">
+                <div className="flex items-center gap-2 sm:gap-4">
                   <Link
                     href="/login"
-                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
+                    className="px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
                   >
                     Masuk
                   </Link>
+
+                  {/* Daftar hanya desktop */}
                   <Link
                     href="/register"
-                    className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] rounded-lg"
+                    className="hidden sm:block px-4 py-2 text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] rounded-lg"
                   >
                     Daftar
                   </Link>

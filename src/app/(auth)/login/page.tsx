@@ -159,12 +159,12 @@ export default function LoginPage() {
             </Link>
 
             {/* KANAN */}
-            <div className="relative w-40 h-40">
+            <div className="relative w-20 h-10 md:w-40 md:h-10">
               <Image
                 src="/icons/logo-pelni.jpeg"
                 alt="PELNI Logo"
                 fill
-                className="object-contain"
+                className="object-contain scale-140"
               />
             </div>
           </div>

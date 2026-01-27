@@ -43,7 +43,7 @@ function ExploreContent() {
           <div className="flex items-center justify-between h-16 px-4">
 
             {/* KIRI */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                 className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
@@ -52,7 +52,7 @@ function ExploreContent() {
               </button>
 
               <Link href="/" className="flex items-center gap-2">
-                <div className="relative w-20 h-10">
+                <div className="relative w-16 h-8 sm:w-20 sm:h-10">
                   <Image
                     src="/icons/logo-sdx.jpeg"
                     alt="SDX Logo"
@@ -60,19 +60,21 @@ function ExploreContent() {
                     className="object-contain"
                   />
                 </div>
-                <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
+
+                {/* Title hanya desktop */}
+                <h1 className="hidden sm:block text-xl font-semibold text-gray-900 dark:text-white">
                   Enterprise AI
                 </h1>
               </Link>
             </div>
 
-            {/* KANAN */}
-            <div className="relative w-40 h-20">
+            {/* KANAN – LOGO PELNI (MUNCUL SEMUA, RESPONSIVE) */}
+            <div className="relative w-20 h-8 sm:w-28 sm:h-10">
               <Image
                 src="/icons/logo-pelni.jpeg"
                 alt="PELNI Logo"
                 fill
-                className="object-contain"
+                className="object-contain scale-140"
               />
             </div>
 
