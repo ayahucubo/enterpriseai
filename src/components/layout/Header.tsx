@@ -12,11 +12,25 @@ export default function Header() {
     <header className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-            <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
+          <div className="relative w-20 h-20">
+            <Image
+              src="/icons/logo-sdx.jpeg"
+              alt="Enterprise AI Logo"
+              fill
+              className="object-contain"
+            />
           </div>
           <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Enterprise AI</h1>
         </Link>
+        {/* KANAN */}
+        <div className="relative w-40 h-20">
+          <Image
+            src="/icons/logo-pelni.jpeg"
+            alt="PELNI Logo"
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
 
       <Menu as="div" className="relative">
@@ -39,9 +53,8 @@ export default function Header() {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    className={`${
-                      active ? 'bg-gray-100 dark:bg-gray-700' : ''
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    className={`${active ? 'bg-gray-100 dark:bg-gray-700' : ''
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     <Cog6ToothIcon className="mr-2 h-5 w-5" />
                     Pengaturan
@@ -51,9 +64,8 @@ export default function Header() {
               <Menu.Item>
                 {({ active }) => (
                   <button
-                    className={`${
-                      active ? 'bg-gray-100 dark:bg-gray-700' : ''
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm text-red-600 dark:text-red-400`}
+                    className={`${active ? 'bg-gray-100 dark:bg-gray-700' : ''
+                      } group flex w-full items-center rounded-md px-2 py-2 text-sm text-red-600 dark:text-red-400`}
                   >
                     Keluar
                   </button>

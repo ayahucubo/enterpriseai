@@ -82,11 +82,25 @@ export default function RegisterPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
+              <div className="relative w-20 h-20">
+                <Image
+                  src="/icons/logo-sdx.jpeg"
+                  alt="Enterprise AI Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
             </Link>
+            {/* KANAN */}
+            <div className="relative w-40 h-40">
+              <Image
+                src="/icons/logo-pelni.jpeg"
+                alt="PELNI Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </header>

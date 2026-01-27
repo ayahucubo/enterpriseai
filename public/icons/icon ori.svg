@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <!-- Background lingkaran ungu -->
+  <circle cx="32" cy="32" r="32" fill="#3f51b5"/>
+
+  <!-- Neural Network Icon -->
+  <g transform="translate(32, 32)">
+    <!-- Neuron tengah -->
+    <circle cx="0" cy="0" r="4" fill="white" stroke="white" stroke-width="1.5"/>
+
+    <!-- Lapisan neuron pertama -->
+    <circle cx="-20" cy="-20" r="3" fill="white" stroke="white" stroke-width="1.5"/>
+    <circle cx="20" cy="-20" r="3" fill="white" stroke="white" stroke-width="1.5"/>
+    <circle cx="-20" cy="20" r="3" fill="white" stroke="white" stroke-width="1.5"/>
+    <circle cx="20" cy="20" r="3" fill="white" stroke="white" stroke-width="1.5"/>
+
+    <!-- Koneksi antar neuron -->
+    <line x1="-20" y1="-20" x2="0" y2="0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="20" y1="-20" x2="0" y2="0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-20" y1="20" x2="0" y2="0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="20" y1="20" x2="0" y2="0" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

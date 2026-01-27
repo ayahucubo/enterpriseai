@@ -39,7 +39,7 @@ export default function LoginPage() {
       if (!response.ok || !data.isValid) {
         throw new Error(data.message || 'Login failed');
       }
-      
+
       // Simpan data auth dengan format yang konsisten
       localStorage.setItem('auth', JSON.stringify({
         token: data.id,
@@ -75,7 +75,7 @@ export default function LoginPage() {
           try {
             setIsLoading(true);
             setError('');
-            
+
             const result = await fetch(`${API_BASE_URL}/google-auth`, {
               method: 'POST',
               headers: {
@@ -87,7 +87,7 @@ export default function LoginPage() {
             });
 
             const data = await result.json();
-            
+
             if (!result.ok) {
               throw new Error(data.message || 'Login with Google failed');
             }
@@ -97,7 +97,7 @@ export default function LoginPage() {
 
             // Decode Google credential untuk mendapatkan info user
             const payload = JSON.parse(atob(response.credential.split('.')[1]));
-            
+
             // Simpan data auth dengan format yang konsisten
             localStorage.setItem('auth', JSON.stringify({
               token: session.id,
@@ -121,7 +121,7 @@ export default function LoginPage() {
       // @ts-ignore
       google.accounts.id.renderButton(
         document.getElementById('googleButton'),
-        { 
+        {
           theme: 'outline',
           size: 'large',
           width: '100%',
@@ -141,13 +141,32 @@ export default function LoginPage() {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
+          <div className="flex items-center justify-between h-16">
+
+            {/* KIRI */}
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative w-20 h-10">
+                <Image
+                  src="/icons/logo-sdx.jpeg"
+                  alt="SDX Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
+              <h1 className="text-xl font-semibold text-gray-900">
+                Enterprise AI
+              </h1>
             </Link>
+
+            {/* KANAN */}
+            <div className="relative w-40 h-40">
+              <Image
+                src="/icons/logo-pelni.jpeg"
+                alt="PELNI Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </header>

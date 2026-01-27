@@ -182,16 +182,14 @@ export default function Home() {
 
   const ChatMessage = ({ content, role }: Message) => (
     <div
-      className={`flex items-start mb-6 ${
-        role === 'user' ? 'justify-end' : 'w-full px-4'
-      }`}
+      className={`flex items-start mb-6 ${role === 'user' ? 'justify-end' : 'w-full px-4'
+        }`}
     >
       <div
-        className={`${
-          role === 'user'
-            ? 'max-w-[80%] bg-[#f9f6fe]'
-            : 'w-full bg-white'
-        } rounded-2xl p-4 text-gray-900`}
+        className={`${role === 'user'
+          ? 'max-w-[80%] bg-[#f9f6fe]'
+          : 'w-full bg-white'
+          } rounded-2xl p-4 text-gray-900`}
       >
         <ReactMarkdown components={markdownComponents}>
           {content}
@@ -205,27 +203,52 @@ export default function Home() {
       <SearchParamsProvider>
         {(searchParams) => (
           <div className="flex flex-col min-h-screen bg-white">
-            {/* Header */}
-            <header className="flex justify-between items-center p-4 border-b border-gray-200">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                  <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
+            <header className="border-b border-gray-200">
+              <div className="grid grid-cols-3 items-center h-16 px-4">
+
+                {/* KIRI */}
+                <Link href="/" className="flex items-center gap-2">
+                  <div className="relative w-20 h-10">
+                    <Image
+                      src="/icons/logo-sdx.jpeg"
+                      alt="SDX Logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <h1 className="text-xl font-semibold text-gray-900">
+                    Enterprise AI
+                  </h1>
+                </Link>
+
+                {/* TENGAH */}
+                <div className="flex justify-center">
+                  <div className="relative w-40 h-10">
+                    <Image
+                      src="/icons/logo-pelni.jpeg"
+                      alt="PELNI Logo"
+                      fill
+                      className="object-contain scale-140"
+                    />
+                  </div>
                 </div>
-                <h1 className="text-xl font-semibold text-gray-900">Enterprise AI</h1>
-              </Link>
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/login"
-                  className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-                >
-                  Masuk
-                </Link>
-                <Link
-                  href="/register"
-                  className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] rounded-lg"
-                >
-                  Daftar
-                </Link>
+
+                {/* KANAN */}
+                <div className="flex justify-end items-center gap-4">
+                  <Link
+                    href="/login"
+                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
+                  >
+                    Masuk
+                  </Link>
+                  <Link
+                    href="/register"
+                    className="hidden md:block px-4 py-2 text-sm font-medium text-white bg-[#3f51b5] hover:bg-[#3b1672] rounded-lg"
+                  >
+                    Daftar
+                  </Link>
+                </div>
+
               </div>
             </header>
 
@@ -290,7 +313,7 @@ export default function Home() {
                       >
                         <User className="w-6 h-6 text-gray-400 dark:text-gray-500" />
                       </button>
-                      
+
                       <input
                         type="text"
                         value={input}
@@ -310,7 +333,7 @@ export default function Home() {
                         <Globe size={16} className="text-gray-400 dark:text-gray-500" />
                         <span>Search</span>
                       </button>
-                      
+
                       <button
                         type="button"
                         disabled

@@ -21,14 +21,14 @@ export default function ExplorePage() {
 
 function ExploreContent() {
   const router = useRouter();
-  const { 
-    tabs, 
-    filteredAgents, 
-    selectedTab, 
-    setSelectedTab, 
+  const {
+    tabs,
+    filteredAgents,
+    selectedTab,
+    setSelectedTab,
     searchQuery,
     setSearchQuery,
-    isLoading 
+    isLoading
   } = useExplore();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null);
@@ -36,23 +36,46 @@ function ExploreContent() {
   return (
     <div className="bg-white dark:bg-gray-900">
       <Sidebar isOpen={isSidebarOpen} onToggle={() => setIsSidebarOpen(!isSidebarOpen)} />
-      
+
       <main className={`flex-1 flex flex-col h-screen overflow-hidden transition-all duration-200 ease-in-out ${isSidebarOpen ? 'ml-64' : 'ml-0'}`}>
         {/* Header */}
-        <div className="flex-none bg-white dark:bg-gray-900">
-          <div className="flex items-center gap-4 px-4 py-4">
-            <button
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-            >
-              <Menu size={20} className="text-gray-500" />
-            </button>
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-[#3f51b5] flex items-center justify-center">
-                <Image src="/icons/icon.svg" alt="Enterprise AI Logo" width={20} height={20} className="text-white" />
-              </div>
-              <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Enterprise AI</h1>
-            </Link>
+        <div className="flex-none bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+          <div className="flex items-center justify-between h-16 px-4">
+
+            {/* KIRI */}
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              >
+                <Menu size={20} className="text-gray-500" />
+              </button>
+
+              <Link href="/" className="flex items-center gap-2">
+                <div className="relative w-20 h-10">
+                  <Image
+                    src="/icons/logo-sdx.jpeg"
+                    alt="SDX Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Enterprise AI
+                </h1>
+              </Link>
+            </div>
+
+            {/* KANAN */}
+            <div className="relative w-40 h-20">
+              <Image
+                src="/icons/logo-pelni.jpeg"
+                alt="PELNI Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+
           </div>
         </div>
 
@@ -91,7 +114,7 @@ function ExploreContent() {
                   <div className="flex pb-1 gap-2">
                     {isLoading ? (
                       <div className="flex gap-2">
-                        {[1,2,3,4].map((i) => (
+                        {[1, 2, 3, 4].map((i) => (
                           <div key={i} className="h-8 w-28 bg-gray-200 dark:bg-gray-800 rounded animate-pulse"></div>
                         ))}
                       </div>
@@ -100,11 +123,10 @@ function ExploreContent() {
                         <button
                           key={tab.category_id}
                           onClick={() => setSelectedTab(tab)}
-                          className={`py-1 px-4 rounded-full text-sm font-medium whitespace-nowrap ${
-                            selectedTab.category_id === tab.category_id
-                              ? 'bg-black text-white dark:bg-white dark:text-black'
-                              : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
-                          }`}
+                          className={`py-1 px-4 rounded-full text-sm font-medium whitespace-nowrap ${selectedTab.category_id === tab.category_id
+                            ? 'bg-black text-white dark:bg-white dark:text-black'
+                            : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                            }`}
                         >
                           {tab.category_name}
                         </button>
@@ -142,9 +164,9 @@ function ExploreContent() {
                           {filteredAgents
                             .filter(agent => agent.category_id === category.category_id)
                             .map((agent) => (
-                              <AgentCard 
-                                key={agent.id} 
-                                agent={agent} 
+                              <AgentCard
+                                key={agent.id}
+                                agent={agent}
                                 onClick={() => setSelectedAgent(agent)}
                               />
                             ))}
@@ -155,9 +177,9 @@ function ExploreContent() {
                     // Tab kategori spesifik
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                       {filteredAgents.map((agent) => (
-                        <AgentCard 
-                          key={agent.id} 
-                          agent={agent} 
+                        <AgentCard
+                          key={agent.id}
+                          agent={agent}
                           onClick={() => setSelectedAgent(agent)}
                         />
                       ))}
