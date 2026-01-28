@@ -45,6 +45,20 @@ body {
   .chat-message li {
     @apply marker:text-gray-500;
   }
+
+  /* === Markdown table styling (chat only) === */
+  .chat-message table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .chat-message th,
+  .chat-message td {
+    @apply border border-gray-300 dark:border-gray-600 px-3 py-2 text-left align-top;
+  }
+
+  .chat-message thead th {
+    @apply bg-gray-100 dark:bg-gray-800 font-semibold;
+  }
 }
 
 @layer utilities {
